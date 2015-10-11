@@ -1,0 +1,2 @@
+#include<cstdio>
+main(){int t,n,i,j,x,y;scanf("%d",&t);while(t--){scanf("%d",&n);int a[n][n];for(i=0;i<n;i++)for(j=0;j<=i;j++)scanf("%d",&a[i][j]);for(i=n-2;i>=0;i--)for(j=0;j<=i;j++){x=a[i+1][j];y=a[i+1][j+1];a[i][j]+=(x>y?x:y);}printf("%d\n",a[0][0]);}}
